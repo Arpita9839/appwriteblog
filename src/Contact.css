@@ -1,0 +1,118 @@
+/* General Container Styling */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+  }
+  
+  /* Right Section: Form Styling */
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 500px;
+    margin-left: 20px;
+    flex: 1;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Inputs Styling */
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus Effect on Inputs */
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Submit Button Styling */
+  .contact-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight enlargement on hover */
+  }
+  
+  /* Calendly Section Styling */
+  .calendly-wrapper {
+    margin-top: 40px;
+    height: 700px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendly-wrapper h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Media Queries for Smaller Screens */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-right {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .contact-form {
+      padding: 20px;
+    }
+  }
+  
