@@ -5,7 +5,8 @@ import { InlineWidget } from 'react-calendly';
 
 const Contact = () => {
   const form = useRef();
-  const [showCalendly, setShowCalendly] = useState(false); 
+  const [showCalendly, setShowCalendly] = useState(false);
+  const [userData, setUserData] = useState({ name: '', email: '' });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,6 +20,11 @@ const Contact = () => {
           console.log('SUCCESS!', result.text);
           alert('Email sent successfully!');
           setShowCalendly(true); 
+          
+       
+          const name = form.current.from_name.value;
+          const email = form.current.from_email.value;
+          setUserData({ name, email }); 
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -27,9 +33,11 @@ const Contact = () => {
       );
   };
 
+  const calendlyUrl = `https://calendly.com/arpitasingh412001?name=${userData.name}&email=${userData.email}`;
+
   return (
     <div className="contact-container">
-      {/* Conditionally render the form or the Calendly scheduler */}
+
       {!showCalendly ? (
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <h2>Contact Us</h2>
@@ -44,7 +52,8 @@ const Contact = () => {
       ) : (
         <div className="calendly-wrapper">
           <h2>Schedule a Meeting</h2>
-          <InlineWidget url="https://calendly.com/arpitasingh412001" />
+        
+          <InlineWidget url={calendlyUrl} />
         </div>
       )}
     </div>
@@ -52,3 +61,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
