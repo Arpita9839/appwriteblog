@@ -45,18 +45,21 @@ const Contact = () => {
       <nav className="navbar">
         <div className="logo">
           <img src={logo} alt="Logo" />
+     
         </div>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
+          <li><a href="#contact">Login</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
           <li><a href="#contact">Contact</a></li>
-        </ul>
+                  </ul>
       </nav>
      
 
       <div className="main-section">
         
         
-        <div className="left-column">
+        <div className="left-column fade-in">
           <h1>Expert IT Consultation at Your Fingertips</h1>
           <p>Schedule a free discovery call and transform your tech strategy.</p>
   
@@ -81,7 +84,7 @@ const Contact = () => {
         <div className="right-column">
           {!showCalendly ? (
             <form ref={form} onSubmit={sendEmail} className="contact-form" id="contact">
-              <h2>Contact Us</h2>
+              <h2>Sechdule Your Free Consultation </h2>
               <label>Name</label>
               <input type="text" name="from_name" required />
               <label>Email</label>
@@ -105,7 +108,10 @@ const Contact = () => {
     <button>Company 2</button>
     <button>Company 3</button>
   </div>
+  <a href="https://wa.me/your-number" className="chat-button">💬</a>
+
 </div>
+
 
     </div>
     

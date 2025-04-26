@@ -220,10 +220,40 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.company-buttons button:hover {
-  background-color:gray;
-  color: #fff;
+.company-buttons button:hover,
+.contact-form input[type="submit"]:hover {
+  background-color: #000;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
 
 
 
