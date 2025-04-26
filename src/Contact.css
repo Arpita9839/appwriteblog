@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('./images/hy.jpg') no-repeat center center fixed;
+  /* background: url('./images/hy.jpg') no-repeat center center fixed; */
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@ body {
   justify-content: center;
 }
 
-.contact-container {
+.container {
   display: flex;
   justify-content: center;
   padding: 40px;
@@ -40,7 +40,7 @@ body {
   font-size: 28px;
   margin-bottom: 20px;
   text-align: center;
-  color: #fff;
+  color: black;
 }
 
 /* Inputs */
@@ -53,37 +53,42 @@ body {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: box-shadow 0.3s ease;
+  background-color: #f2f2f2;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #4caf50;
+  box-shadow: 0 0 0 2px gray;
 }
 
 .contact-form input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color: gray;
+  color:black;
   padding: 14px;
   font-size: 16px;
-  border: none;
+  border:2px;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.contact-form input[type="submit"]:hover {
+/* .contact-form input[type="submit"]:hover {
   background-color: #43a047;
   transform: scale(1.05);
-}
+} */
 
 
 .calendly-wrapper {
@@ -115,3 +120,111 @@ body {
     max-width: 100%;
   }
 }
+.contact-container {
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  width: 100%;
+  max-width: 1200px; /* or any width you want */
+  margin: 0 auto;     /* center it horizontally */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.navbar .logo img {
+  height: 40px; /* Resize logo if needed */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between Home and Contact */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+ 
+  
+}
+
+.side-image {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 250px;
+}
+.info-block {
+  display: flex;
+  align-items: center;
+  margin: 6px 0; 
+ 
+}
+
+.info-block img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+  background: transparent;
+  
+}
+.trusted-companies {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.trusted-companies p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.company-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: 2px solid gray;
+  background-color: gray;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.company-buttons button:hover {
+  background-color:gray;
+  color: #fff;
+}
+
+
+
+
